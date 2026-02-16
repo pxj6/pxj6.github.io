@@ -204,6 +204,42 @@ margin-bottom: 0.3rem; /* diminui o espaço entre parágrafos */
 .Sub-desc {
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-content {
+    flex-direction: column;   /* empilha imagem e texto */
+    text-align: center;
+  }
+
+  .card-img {
+    max-width: 160px;         /* imagem um pouco maior no mobile */
+  }
+
+  .card-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .card-info button {
+    align-self: center;       /* centraliza botão */
+    width: 100%;              /* botão largura total */
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .info-desc2 {
+    font-size: 0.8rem;
+  }
+
+}
+
   </style>
 </head>
 
