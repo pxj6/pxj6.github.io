@@ -2,17 +2,21 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>trabalhosdedesigner</title>
+  <title>Baixa Music</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Ícone do site -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="theme-color" content="#1DB954">
 
   <style>
     :root {
-      --bg: #0f0f10;
-      --card: #1a1a1d;
-      --text: #f5f5f5;
-      --muted: #b5b5b5;
-      --accent: #6cf2c2;
-      --danger: #ff6b6b;
+      --bg: #121212;
+      --card: #181818;
+      --text: #ffffff;
+      --muted: #b3b3b3;
+      --accent: #1DB954;
+      --danger: #ff4d4d;
     }
 
     * {
@@ -38,6 +42,7 @@
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     header p {
@@ -51,14 +56,14 @@
       color: #000;
       border: none;
       padding: 0.9rem 1.5rem;
-      border-radius: 8px;
+      border-radius: 50px;
       font-weight: 600;
       cursor: pointer;
       transition: transform 0.15s ease, opacity 0.15s ease;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: scale(1.05);
       opacity: 0.9;
     }
 
@@ -72,6 +77,7 @@
       text-align: center;
       margin-bottom: 2rem;
       font-size: 1.8rem;
+      font-weight: 600;
     }
 
     .steps, .services {
@@ -83,8 +89,13 @@
     .card {
       background: var(--card);
       padding: 1.8rem;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -109,10 +120,10 @@
     }
 
     .rules {
-      background: #111;
-      border-left: 4px solid var(--danger);
+      background: #101010;
+      border-left: 4px solid var(--accent);
       padding: 1.5rem;
-      border-radius: 8px;
+      border-radius: 12px;
       color: var(--muted);
       font-size: 0.95rem;
     }
@@ -135,66 +146,22 @@
 <body>
 
 <header>
-  <h1>Design profissional, sem conversa</h1>
-  <p>
-    Escolha o serviço, envie o briefing e receba.<br>
-    Processo simples, direto e sem contato desnecessário.
-  </p>
-  <button class="btn" onclick="scrollToServices()">Escolher serviço</button>
-</header>
-
-<section>
-  <h2>Como funciona</h2>
-  <div class="steps">
-    <div class="card">
-      <h3>1. Escolha</h3>
-      <p>Selecione um dos serviços disponíveis.</p>
-    </div>
-    <div class="card">
-      <h3>2. Briefing</h3>
-      <p>Envie as informações necessárias.</p>
-    </div>
-    <div class="card">
-      <h3>3. Pagamento</h3>
-      <p>Pagamento via Pix. Projeto iniciado após confirmação.</p>
-    </div>
-  </div>
-</section>
-
 <section id="services">
-  <h2>Serviços disponíveis</h2>
+  <h2></h2>
 
   <div class="services">
     <div class="card">
-      <h3>Logotipo</h3>
-      <p>Criação de logotipo profissional.</p>
-      <div class="price">R$ 99 (promoção)</div>
-      <p>✔ 1 revisão<br>✔ Entrega em até 3 dias</p>
-      <button class="btn" onclick="selectService('logo')">Selecionar</button>
+      <h3>Flashback Retro Hits 70 80 90</h3>
+      <p>Mais de 200 clipes incríveis para curtir na estrada</p>
+      <div class="price">R$9,90 (promoção)</div>
+      <p>✔ Formato compatível<br>✔ Resolução apropriada</p>
+      <button class="btn" onclick="selectService('logo')">Baixar agora</button>
     </div>
 
-    <div class="card">
-      <h3>Logo animado</h3>
-      <p>Animação curta para redes sociais.</p>
-      <div class="price">R$ 149 (promoção)</div>
-      <p>✔ 1 revisão<br>✔ Entrega em até 3 dias</p>
-      <button class="btn" onclick="selectService('animado')">Selecionar</button>
-    </div>
   </div>
 </section>
+</header>
 
-<section id="filter" class="hidden">
-  <h2>Confirmação de escopo</h2>
-
-  <div class="card">
-    <p>
-      Este site atende <strong>apenas</strong> os serviços listados.<br>
-      Outros tipos de pedidos não são processados.
-    </p>
-
-    <button class="btn" onclick="goToBriefing()">Continuar para o briefing</button>
-  </div>
-</section>
 
 <section>
   <h2>Regras do serviço</h2>
@@ -208,7 +175,7 @@
 </section>
 
 <footer>
-  © 2026 — trabalhosdedesigner
+  © 2026 — Baixa Music
 </footer>
 
 <script>
@@ -224,19 +191,15 @@
     document.getElementById('filter').scrollIntoView({ behavior: 'smooth' });
   }
 
-function goToBriefing() {
-  if (!selectedService) {
-    alert("Por favor, selecione um serviço antes de continuar.");
-    return;
+  function goToBriefing() {
+    if (!selectedService) {
+      alert("Por favor, selecione um serviço antes de continuar.");
+      return;
+    }
+
+    localStorage.setItem("servico", selectedService);
+    window.location.href = "detalhes.html";
   }
-
-  // salva o serviço escolhido
-  localStorage.setItem("servico", selectedService);
-
-  // redireciona para a página de briefing
-  window.location.href = "detalhes.html";
-}
-
 </script>
 
 </body>
