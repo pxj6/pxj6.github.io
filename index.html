@@ -278,11 +278,33 @@
   fill: var(--accent) !important;
 }
 
+
+.hero {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero .capa {
+  width: 100%;     /* ocupa toda a largura */
+  height: auto;    /* mantém proporção */
+  display: block;
+}
+
+
+.hero .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: auto;
+}
+
 .capa {
-      width: 100%;          /* ocupa toda a largura da tela */
-      height: auto;         /* mantém a proporção original */
-      display: block;       /* evita espaços extras */
-    }
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
   </style>
 </head>
@@ -290,8 +312,11 @@
 <body>
 
 <header>
-<img src="logo.svg" alt="Baixa Music" class="logo">
-<img class="capa" src="https://i.imgur.com/XkHi3n3.png" alt="Capa do site">
+<div class="hero">
+  <img src="logo.svg" alt="Baixa Music" class="logo">
+  <img class="capa" src="https://i.imgur.com/XkHi3n3.png" alt="Capa do site">
+</div>
+
   <h2></h2>
 
   <div class="services">
