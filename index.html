@@ -140,6 +140,24 @@
         font-size: 2rem;
       }
     }
+
+    .card-content {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 1rem; /* espaço entre imagem e texto */
+}
+
+.card-img {
+  width: 120px;   /* tamanho quadrado */
+  height: 120px;
+  border-radius: 12px; /* cantos arredondados */
+  object-fit: cover;   /* mantém proporção sem distorcer */
+}
+
+.card-info {
+  flex: 1; /* ocupa o espaço restante */
+  text-align: left;
+}
   </style>
 </head>
 
@@ -150,15 +168,18 @@
   <h2></h2>
 
   <div class="services">
-    <div class="card">
+<div class="card">
+  <div class="card-content">
+    <img src="imagem.jpg" alt="Capa do clipe" class="card-img">
+    <div class="card-info">
       <h3>Flashback Retro Hits 70 80 90</h3>
       <p>Mais de 200 clipes incríveis para curtir na estrada</p>
       <div class="price">R$9,90 (promoção)</div>
       <p>✔ Formato compatível<br>✔ Resolução apropriada</p>
       <button class="btn" onclick="selectService('logo')">Baixar agora</button>
     </div>
-
   </div>
+</div>
 </section>
 </header>
 
@@ -166,11 +187,8 @@
 <section>
   <h2>Regras do serviço</h2>
   <div class="rules">
-    • Apenas os serviços descritos são aceitos<br>
-    • 1 revisão inclusa<br>
-    • Alterações extras são cobradas<br>
-    • Prazo começa após briefing + pagamento<br>
-    • Não há atendimento via WhatsApp ou DM
+    • Pagamento via PIX<br>
+    • O arquivo será enviado via link, pelo WhatsApp<br>
   </div>
 </section>
 
