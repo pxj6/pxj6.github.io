@@ -240,6 +240,20 @@ margin-bottom: 0.3rem; /* diminui o espaço entre parágrafos */
 
 }
 
+.mobile-title {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-title {
+    display: none;
+  }
+
+  .mobile-title {
+    display: inline;
+  }
+}
+
   </style>
 </head>
 
@@ -258,7 +272,11 @@ margin-bottom: 0.3rem; /* diminui o espaço entre parágrafos */
          loading="lazy">
 
     <div class="card-info">
-      <h3>Flashback – Retro 70 80 90</h3>
+      <h3>
+      <span class="desktop-title">Flashback – Retro 70 80 90</span>
+      <span class="mobile-title">Flashback 70 • 80 • 90</span>
+      </h3>
+
       <p class="Sub-desc">Mais de 200 videoclipes incríveis para curtir na estrada</p>
       <p class="info-desc2">✔&nbsp;Formato compatível&nbsp;&nbsp;&nbsp;✔&nbsp;Resolução apropriada</p>
       <div class="price">R$9,90</div>
