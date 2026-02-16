@@ -281,13 +281,15 @@
 
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;        /* ocupa a largura da página */
+  height: 100vh;      /* ocupa a altura da tela */
   overflow: hidden;
 }
 
 .hero .capa {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;  /* ajusta sem distorcer */
   display: block;
 }
 
@@ -297,13 +299,6 @@
   left: 20px;
   width: 120px;
   height: auto;
-}
-
-
-.capa {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
   </style>
