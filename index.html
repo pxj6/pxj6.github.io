@@ -301,24 +301,28 @@ body {
 
 .hero {
   position: relative;
-  width: 100%;          /* ocupa toda a largura da tela */
-  min-height: 300px;    /* altura mínima para mobile */
+  width: 100%;
+  min-height: 300px;   /* altura mínima para mobile */
   overflow: hidden;
 }
 
 .hero .capa {
-  width: 100%;          /* acompanha a largura da tela */
-  height: auto;         /* mantém proporção */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 .hero .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 120px;
+  top: 50%;            /* posiciona no meio vertical */
+  left: 20px;          /* continua alinhada à esquerda */
+  transform: translateY(-50%); /* centraliza verticalmente */
+  width: 140px;
   height: auto;
+  margin-bottom: 1.5rem;
+  fill: var(--accent) !important;
 }
+
 
   </style>
 </head>
