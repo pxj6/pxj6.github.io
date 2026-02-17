@@ -12,6 +12,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <style>
+
+    /* Remove o highlight azul em navegadores WebKit (Chrome, Safari, Android, iOS) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Já temos user-select:none para impedir seleção de texto */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+    
     :root {
       --bg: #121212;
       --card: #181818;
