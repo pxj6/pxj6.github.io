@@ -321,3 +321,22 @@
     fill: var(--accent) !important;
   }
 
+  /* QR Code PIX */
+  .qrpix {
+  display: block;
+  max-width: 280px;   /* tamanho máximo em mobile */
+  width: 100%;        /* ocupa toda a largura disponível */
+  height: auto;
+  margin: 20px auto;  /* centraliza horizontalmente */
+  border-radius: 16px; /* cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* leve sombra */
+  }
+
+  /* Ajuste para telas maiores (desktop) */
+  @media (min-width: 768px) {
+  .qrpix {
+  max-width: 320px; /* aumenta um pouco no desktop */
+  border-radius: 20px;
+  }
+}
+
