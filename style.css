@@ -93,7 +93,7 @@
 
   .copy-btn {
   display: inline-flex;   /* muda para inline-flex */
-  text-align: center;
+  text-align: center!important;
   align-items: center;    /* alinha verticalmente ícone e texto */
   padding: 0.9rem 1.5rem;
   background: var(--accent);
