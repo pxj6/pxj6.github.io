@@ -19,3 +19,10 @@
     localStorage.setItem("servico", selectedService);
     window.location.href = "detalhes.html";
   }
+
+    function copyPixKey() {
+    const pixKey = "pagamentosviapix@gmail.com";
+    navigator.clipboard.writeText(pixKey).then(() => {
+      alert("Chave Pix copiada: " + pixKey);
+    });
+  }
