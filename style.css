@@ -140,7 +140,7 @@ h2 {
   font-weight: bold;
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1rem; /* espaçamento entre a borda e o texto */
+  padding-top: 3rem; /* espaçamento entre a borda e o texto */
   margin-top: 0;     /* mantém sem margem extra acima */
 }
 
