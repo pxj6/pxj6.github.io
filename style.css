@@ -133,16 +133,16 @@
     padding-bottom: 1rem!important;
   }
 
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--muted);
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 0rem;
-    margin-top: 0rem;
-  }
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1rem; /* espaçamento entre a borda e o texto */
+  margin-top: 0;     /* mantém sem margem extra acima */
+}
 
   /* Grids */
   .steps, .services {
