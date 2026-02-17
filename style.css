@@ -330,6 +330,13 @@
     fill: var(--accent) !important;
   }
 
+  .logo2 {
+    width: 140px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    fill: var(--accent) !important;
+  }
+
   .hero {
     position: relative;
     width: 100%;
