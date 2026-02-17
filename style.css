@@ -386,4 +386,7 @@ h2 {
   margin-top: 0rem !important;
   } 
 
+  input, button, select, textarea {
+  font-size: 16px; /* evita zoom automático em Android e iOS */
+  }
 
