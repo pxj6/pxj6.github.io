@@ -380,5 +380,7 @@
   border-radius: 20px;
   }
 
-}
+  .pix-info {
+  padding-top: 0rem !important;
+  } 
 
