@@ -91,6 +91,33 @@
   opacity: 0.8;
   }
 
+  .copy-btn {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  background: var(--accent);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .copy-btn svg {
+  margin-right: 8px;
+  }
+
+  .copy-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  }
+
+  .copy-btn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+  }
+
   /* Seções */
   section {
     max-width: 1100px;
@@ -338,5 +365,6 @@
   max-width: 320px; /* aumenta um pouco no desktop */
   border-radius: 20px;
   }
+
 }
 
