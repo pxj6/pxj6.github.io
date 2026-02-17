@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <title>Baixa Music</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
 
   <!-- Ícone do site -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#1DB954">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <style>
     :root {
@@ -30,6 +32,11 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+
+      user-select: none;   /* impede seleção de texto */
+      -webkit-user-select: none; /* compatibilidade Safari */
+      -ms-user-select: none;     /* compatibilidade IE/Edge antigo */
+
     }
 
     header {
