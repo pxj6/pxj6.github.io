@@ -70,6 +70,7 @@
 
   .btn-whatsapp {
   display: inline-block;
+  margin-top: 1.5rem; /* adiciona espaço acima do botão */
   padding: 0.9rem 1.5rem;
   background: var(--accent);
   color: #000;
