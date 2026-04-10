@@ -331,16 +331,18 @@ h2 {
   /* Títulos alternativos */
   .mobile-title { display: none; }
   @media (max-width: 768px) {
-    .desktop-title { display: none; }
-    .mobile-title { display: inline; 
+    h3.desktop-title { display: none; 
+    font-family: 'Burger Free', sans-serif;}
+    h3.mobile-title { display: inline; 
     font-family: 'Burger Free', sans-serif;}
   }
 
   /* Benefícios alternativos */
   .mobile-benefits { display: none; }
   @media (max-width: 768px) {
-    .desktop-benefits { display: none; }
-    .mobile-benefits { display: block; 
+    h3.desktop-benefits { display: none; 
+    font-family: 'Burger Free', sans-serif;}
+    h3.mobile-benefits { display: block; 
     font-family: 'Burger Free', sans-serif;}
   }
 
