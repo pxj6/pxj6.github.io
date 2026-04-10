@@ -331,14 +331,16 @@ h2 {
   .mobile-title { display: none; }
   @media (max-width: 768px) {
     .desktop-title { display: none; }
-    .mobile-title { display: inline; }
+    .mobile-title { display: inline; 
+    font-family: 'Burger Free', sans-serif;}
   }
 
   /* Benefícios alternativos */
   .mobile-benefits { display: none; }
   @media (max-width: 768px) {
     .desktop-benefits { display: none; }
-    .mobile-benefits { display: block; }
+    .mobile-benefits { display: block; 
+    font-family: 'Burger Free', sans-serif;}
   }
 
   /* Hero */
