@@ -150,16 +150,6 @@ h2 {
   font-weight: bold;
 }
 
-/* TEXTO PADRÃO */
-.card p,
-.description,
-.rules {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-}
-
 /* PREÇO */
 .price {
   font-size: 1.4rem;
@@ -187,7 +177,28 @@ h2 {
   text-align: left;
 }
 
-/* DESCRIÇÃO */
+/* DESCRIÇÃO PADRÃO */
+.card p,
+.description,
+.rules {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+/* DESCRIÇÃO DOS BURGERS (SEPARADA E SEGURA) */
+.desktop-benefits,
+.mobile-benefits {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* INFO DESCRIÇÃO */
 .info-desc2 {
   font-size: 0.85rem;
   line-height: 1.4;
@@ -245,11 +256,9 @@ footer {
   }
 }
 
-/* TÍTULOS BURGER FREE (CORRIGIDO E ISOLADO) */
+/* TÍTULOS BURGER FREE (APENAS TÍTULO) */
 .desktop-title,
-.mobile-title,
-.desktop-benefits,
-.mobile-benefits {
+.mobile-title {
   font-family: 'Burger Free', sans-serif !important;
   line-height: 1.1;
 }
@@ -311,7 +320,7 @@ footer {
   }
 }
 
-/* INPUT FIX MOBILE ZOOM */
+/* INPUT FIX MOBILE */
 input,
 button,
 select,
