@@ -193,7 +193,11 @@ h2 {
     font-weight: bold;
   }
 
-  .card p {
+.card p,
+.description,
+.rules,
+span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--muted);
     font-size: 0.95rem;
     margin-bottom: 0.3rem;
@@ -332,10 +336,10 @@ h2 {
 /* --- */
 
 /* TÍTULOS (FORÇADO SEM HERDAR NADA) */
-h3.desktop-title,
-h3.mobile-title,
-h3.desktop-benefits,
-h3.mobile-benefits {
+.desktop-title,
+.mobile-title,
+.desktop-benefits,
+.mobile-benefits {
   font-family: 'Burger Free', sans-serif !important;
   color: inherit;
   line-height: 1.1;
