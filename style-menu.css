@@ -15,7 +15,7 @@
   --text: #E82C2C;
   --muted: #6B3E3E;
   --accent: #E82C2C;
-  --danger: #ff4d4d;
+  --danger: #FFE500;
 }
 
 /* BODY */
@@ -138,7 +138,7 @@ section {
 
 /* RULES */
 .rules {
-  background: #101010;
+  background: #FFE500;
   border-left: 4px solid var(--accent);
   padding: 1.5rem;
   border-radius: 12px;
