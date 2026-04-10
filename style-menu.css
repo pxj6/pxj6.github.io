@@ -330,12 +330,14 @@ h2 {
 
 /* --- */
 
-/* TÍTULOS (Burger Free) */
+/* TÍTULOS (FORÇADO SEM HERDAR NADA) */
 h3.desktop-title,
 h3.mobile-title,
 h3.desktop-benefits,
 h3.mobile-benefits {
-  font-family: 'Burger Free', sans-serif;
+  font-family: 'Burger Free', sans-serif !important;
+  color: inherit;
+  line-height: 1.1;
 }
 
 /* CONTROLE DE VISIBILIDADE */
