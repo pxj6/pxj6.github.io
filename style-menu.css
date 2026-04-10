@@ -1,156 +1,113 @@
 @import url('https://fonts.cdnfonts.com/css/burger-free');
 
-/* Reset e ajustes globais */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent; /* remove highlight azul em mobile */
-  }
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  :root {
-    --bg: #FFCC00;
-    --card: #FFE500;
-    --text: #E82C2C;
-    --muted: #6B3E3E;
-    --accent: #E82C2C;
-    --danger: #ff4d4d;
-  }
+/* VARIÁVEIS */
+:root {
+  --bg: #FFCC00;
+  --card: #FFE500;
+  --text: #E82C2C;
+  --muted: #6B3E3E;
+  --accent: #E82C2C;
+  --danger: #ff4d4d;
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
+/* BODY */
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
+/* BACKGROUND STRIPES */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
-
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(0,0,0,0.04),
-      rgba(0,0,0,0.04) 40px,
-      transparent 40px,
-      transparent 80px
-    );
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,0.04),
+    rgba(0,0,0,0.04) 40px,
+    transparent 40px,
+    transparent 80px
+  );
 }
 
-  /* Header */
-  header {
-    padding: 0 1.5rem;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-  }
+/* HEADER */
+header {
+  padding: 0 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
 
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
 
-  header p {
-    color: var(--muted);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
+header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
-  /* Botões */
-  .btn {
-    background: var(--accent);
-    color: #000;
-    border: none;
-    padding: 0.9rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-  }
-
-  .btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-
-  .btn:active {
-  transform: scale(0.95);
-  opacity: 0.8;
-  }
-
-
-  .btn-whatsapp {
-  display: inline-block;
-  margin-top: 1.5rem; /* adiciona espaço acima do botão */
-  padding: 0.9rem 1.5rem;
+/* BOTÕES */
+.btn,
+.btn-whatsapp,
+.copy-btn {
   background: var(--accent);
   color: #000;
-  text-decoration: none;
   border: none;
+  padding: 0.9rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
-  }
+}
 
-  .btn-whatsapp:hover {
+.btn:hover,
+.btn-whatsapp:hover,
+.copy-btn:hover {
   transform: scale(1.05);
   opacity: 0.9;
-  }
+}
 
-  .btn-whatsapp:active {
+.btn:active,
+.btn-whatsapp:active,
+.copy-btn:active {
   transform: scale(0.95);
   opacity: 0.8;
-  }
+}
 
-  .copy-btn {
-  display: inline-flex;   /* muda para inline-flex */
-  text-align: center!important;
-  align-items: center;    /* alinha verticalmente ícone e texto */
-  padding: 0.9rem 1.5rem;
-  background: var(--accent);
-  color: #000;
-  text-decoration: none;
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  }
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+}
 
-  .copy-btn svg {
-  margin-right: 8px;      /* espaço entre ícone e texto */
-  }
+.copy-btn svg {
+  margin-right: 8px;
+}
 
-  .copy-btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-  }
+/* SEÇÕES */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
 
-  .copy-btn:active {
-  transform: scale(0.95);
-  opacity: 0.8;
-  }
-
-
-  .iconsvg {
-  color: #000 !important;
-  }
-
-  /* Seções */
-  section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 3rem 1.5rem;
-    padding-bottom: 1rem!important;
-  }
-
+/* TÍTULOS PRINCIPAIS */
 h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -158,194 +115,146 @@ h2 {
   font-weight: bold;
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 3rem; /* espaçamento entre a borda e o texto */
-  margin-top: 0;     /* mantém sem margem extra acima */
+  padding-top: 3rem;
 }
 
-  /* Grids */
-  .steps, .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
+/* GRID */
+.steps,
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
 
-  /* Cards */
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: var(--card);
-    border-radius: 16px;
-    text-align: center;
-    transition: transform 0.2s ease;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-  .card:hover {
-    transform: translateY(-5px);
-  }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-  .card h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
+/* TEXTO PADRÃO */
 .card p,
 .description,
-.rules,
-span {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 0.3rem;
+.rules {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* PREÇO */
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* CONTEÚDO DO CARD */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-img {
+  max-width: 120px;
+  border-radius: 8px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* DESCRIÇÃO */
+.info-desc2 {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+/* REGRAS */
+.rules {
+  background: #101010;
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
   }
 
-  .price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--accent);
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  /* Conteúdo dentro do card */
   .card-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    text-align: center;
   }
 
   .card-img {
-    max-width: 120px;
-    border-radius: 8px;
+    max-width: 160px;
   }
 
   .card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    text-align: left;
-  }
-
-  .card-info-content {
-    flex: 1;
+    text-align: center;
+    align-items: center;
   }
 
   .card-info button {
-    margin-top: 1rem;
-    align-self: flex-start;
+    align-self: center;
+    width: 100%;
   }
 
-  /* Info extra */
-  .info-descricao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .card h3 {
+    font-size: 1.4rem;
   }
 
   .info-desc2 {
-    font-size: 0.85rem !important;
-    line-height: 1.4;
-    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
   }
+}
 
-  .Sub-desc {
-    font-weight: bold;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem !important;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  /* Regras */
-  .rules {
-    background: #101010;
-    border-left: 4px solid var(--accent);
-    padding: 1.5rem;
-    border-radius: 12px;
-    color: var(--muted);
-    font-family: system-ui;
-    font-size: 0.95rem;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-      /* Footer */
-  footer {
-    text-align: center;
-    padding-top: 0rem!important;
-    padding: 2rem;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
-    padding: 2rem;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
-
-  /* Responsividade */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .card {
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .card-content {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .card-img {
-      max-width: 160px;
-    }
-
-    .card-info {
-      text-align: center;
-      align-items: center;
-    }
-
-    .card-info button {
-      align-self: center;
-      width: 100%;
-    }
-
-    .card h3 {
-      font-size: 1.4rem;
-    }
-
-    .info-desc2 {
-      font-size: 0.8rem;
-    }
-  }
-
-/* --- */
-
-/* TÍTULOS (FORÇADO SEM HERDAR NADA) */
+/* TÍTULOS BURGER FREE (CORRIGIDO E ISOLADO) */
 .desktop-title,
 .mobile-title,
 .desktop-benefits,
 .mobile-benefits {
   font-family: 'Burger Free', sans-serif !important;
-  color: inherit;
   line-height: 1.1;
 }
 
-/* CONTROLE DE VISIBILIDADE */
+/* CONTROLE MOBILE/DESKTOP */
 .mobile-title,
 .mobile-benefits {
   display: none;
@@ -366,79 +275,46 @@ span {
   }
 }
 
-/* TEXTO NORMAL (EVITA HERDAR A FONTE) */
-p,
-span,
-.card p,
-.description,
-.rules {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+/* HERO */
+.logo,
+.logo2 {
+  width: 140px;
+  fill: var(--accent) !important;
 }
 
-/* --- */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  overflow: hidden;
+}
 
-  /* Hero */
-  .logo {
-    width: 140px;
-    margin-bottom: 1.5rem;
-    fill: var(--accent) !important;
-  }
-
-  .logo2 {
-    width: 140px;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem; 
-    fill: var(--accent) !important;
-  }
-
-  .hero {
-    position: relative;
-    width: 100%;
-    min-height: 250px;
-    overflow: hidden;
-  }
-
-  .hero .capa {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .hero .logo {
-    position: absolute;
-    top: 20%; /* centraliza verticalmente */
-    left: 0;
-    transform: translateY(-50%);
-    width: 140px;
-    height: auto;
-    margin-bottom: 1.5rem;
-    fill: var(--accent) !important;
-  }
-
-  /* QR Code PIX */
-  .qrpix {
+.hero .capa {
+  width: 100%;
   display: block;
-  max-width: 280px;   /* tamanho máximo em mobile */
-  width: 100%;        /* ocupa toda a largura disponível */
-  height: auto;
-  margin: 20px auto;  /* centraliza horizontalmente */
-  border-radius: 16px; /* cantos arredondados */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* leve sombra */
-  }
+}
 
-  /* Ajuste para telas maiores (desktop) */
-  @media (min-width: 768px) {
+/* QR CODE */
+.qrpix {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
   .qrpix {
-  max-width: 320px; /* aumenta um pouco no desktop */
-  border-radius: 20px;
+    max-width: 320px;
+    border-radius: 20px;
   }
+}
 
-  section.pix-info {
-  padding-top: 0rem !important;
-  margin-top: 0rem !important;
-  } 
-
-  input, button, select, textarea {
-  font-size: 16px; /* evita zoom automático em Android e iOS */
-  }
-
+/* INPUT FIX MOBILE ZOOM */
+input,
+button,
+select,
+textarea {
+  font-size: 16px;
+}
