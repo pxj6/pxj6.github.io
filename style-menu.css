@@ -71,7 +71,7 @@ section {
   background: var(--card);
   border-radius: 16px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 1rem;
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
