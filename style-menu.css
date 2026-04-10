@@ -328,23 +328,47 @@ h2 {
     }
   }
 
-  /* Títulos alternativos */
-  .mobile-title { display: none; }
-  @media (max-width: 768px) {
-    h3.desktop-title { display: none; 
-    font-family: 'Burger Free', sans-serif;}
-    h3.mobile-title { display: inline; 
-    font-family: 'Burger Free', sans-serif;}
+/* --- */
+
+/* TÍTULOS (Burger Free) */
+h3.desktop-title,
+h3.mobile-title,
+h3.desktop-benefits,
+h3.mobile-benefits {
+  font-family: 'Burger Free', sans-serif;
+}
+
+/* CONTROLE DE VISIBILIDADE */
+.mobile-title,
+.mobile-benefits {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-title,
+  .desktop-benefits {
+    display: none;
   }
 
-  /* Benefícios alternativos */
-  .mobile-benefits { display: none; }
-  @media (max-width: 768px) {
-    h3.desktop-benefits { display: none; 
-    font-family: 'Burger Free', sans-serif;}
-    h3.mobile-benefits { display: block; 
-    font-family: 'Burger Free', sans-serif;}
+  .mobile-title {
+    display: inline;
   }
+
+  .mobile-benefits {
+    display: block;
+  }
+}
+
+/* TEXTO NORMAL (EVITA HERDAR A FONTE) */
+p,
+span,
+.card p,
+.description,
+.rules {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* --- */
 
   /* Hero */
   .logo {
