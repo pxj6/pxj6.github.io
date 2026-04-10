@@ -15,7 +15,7 @@
   --text: #E82C2C;
   --muted: #6B3E3E;
   --accent: #E82C2C;
-  --danger: #FFE500;
+  --danger: #FFFFFF
 }
 
 /* BODY */
@@ -211,4 +211,8 @@ button,
 select,
 textarea {
   font-size: 16px;
+}
+
+h2 {
+  color: #FFFFFF!important;
 }
