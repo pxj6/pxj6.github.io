@@ -24,11 +24,9 @@ body {
   color: var(--text);
   line-height: 1.6;
   user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
-/* BACKGROUND STRIPES */
+/* BACKGROUND */
 body::before {
   content: "";
   position: fixed;
@@ -51,19 +49,7 @@ header {
   margin: auto;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-header p {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-/* BOTÕES */
+/* BUTTONS */
 .btn,
 .btn-whatsapp,
 .copy-btn {
@@ -73,49 +59,13 @@ header p {
   padding: 0.9rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.btn:hover,
-.btn-whatsapp:hover,
-.copy-btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.btn:active,
-.btn-whatsapp:active,
-.copy-btn:active {
-  transform: scale(0.95);
-  opacity: 0.8;
-}
-
-.copy-btn {
-  display: inline-flex;
-  align-items: center;
-}
-
-.copy-btn svg {
-  margin-right: 8px;
-}
-
-/* SEÇÕES */
+/* SECTIONS */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 3rem 1.5rem;
-}
-
-/* TÍTULOS PRINCIPAIS */
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 3rem;
 }
 
 /* GRID */
@@ -130,88 +80,69 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 2rem;
   background: var(--card);
   border-radius: 16px;
-  text-align: center;
-  transition: transform 0.2s ease;
   max-width: 600px;
   margin: 0 auto;
 
-  /* 🔥 IMPORTANTE: impede herança de fonte do título */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-/* PREÇO */
-.price {
-  font-size: 1.4rem;
-  font-weight: bold !important;
-  color: var(--accent);
-}
-
-/* CONTEÚDO DO CARD */
-.card-content {
+/* INFO */
+.card-info {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  text-align: left;
+  font-family: system-ui;
 }
 
+/* IMAGEM */
 .card-img {
   max-width: 120px;
   border-radius: 8px;
 }
 
-.card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-
-  /* 🔥 BLOQUEIA HERANÇA DO BURGER FREE */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+/* TÍTULO BURGER */
+.desktop-title,
+.mobile-title {
+  font-family: 'Burger Free', sans-serif !important;
 }
 
-/* DESCRIÇÃO PADRÃO */
+/* DESCRIÇÃO */
 .card p,
 .description,
 .rules {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui;
   color: var(--muted);
   font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-  line-height: 1.4;
 }
 
-/* 🔥 DESCRIÇÃO DOS BURGERS (FORÇA TOTAL SEM HERANÇA) */
+/* 🔥 DESCRIÇÃO SEGURA */
 .desktop-benefits,
 .mobile-benefits {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: system-ui !important;
   font-size: 0.9rem !important;
-  font-weight: 400 !important;
   color: var(--muted) !important;
-  line-height: 1.4 !important;
 }
 
-/* INFO DESCRIÇÃO */
-.info-desc2 {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  margin-bottom: 0.3rem;
+/* 🔥 PREÇO (CORRIGIDO DEFINITIVAMENTE) */
+.price {
+  font-size: 1.4rem;
+  font-weight: 900 !important;
+  color: var(--accent);
+  line-height: 1.2;
 }
 
-/* REGRAS */
+/* CONTEÚDO */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* RULES */
 .rules {
   background: #101010;
   border-left: 4px solid var(--accent);
@@ -224,14 +155,13 @@ footer {
   text-align: center;
   padding: 2rem;
   color: var(--muted);
-  font-size: 0.85rem;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+
   .card {
     padding: 1.5rem;
-    margin-top: 1.5rem;
   }
 
   .card-content {
@@ -245,31 +175,19 @@ footer {
 
   .card-info {
     text-align: center;
-    align-items: center;
-  }
-
-  .card-info button {
-    align-self: center;
-    width: 100%;
   }
 
   .card h3 {
     font-size: 1.4rem;
   }
 
-  .info-desc2 {
-    font-size: 0.8rem;
+  .price {
+    font-size: 1.3rem;
+    font-weight: 900 !important;
   }
 }
 
-/* TÍTULOS BURGER FREE (APENAS TÍTULO) */
-.desktop-title,
-.mobile-title {
-  font-family: 'Burger Free', sans-serif !important;
-  line-height: 1.1;
-}
-
-/* CONTROLE MOBILE/DESKTOP */
+/* CONTROLE MOBILE */
 .mobile-title,
 .mobile-benefits {
   display: none;
@@ -290,43 +208,7 @@ footer {
   }
 }
 
-/* HERO */
-.logo,
-.logo2 {
-  width: 140px;
-  fill: var(--accent) !important;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 250px;
-  overflow: hidden;
-}
-
-.hero .capa {
-  width: 100%;
-  display: block;
-}
-
-/* QR CODE */
-.qrpix {
-  display: block;
-  max-width: 280px;
-  width: 100%;
-  margin: 20px auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-@media (min-width: 768px) {
-  .qrpix {
-    max-width: 320px;
-    border-radius: 20px;
-  }
-}
-
-/* INPUT FIX MOBILE */
+/* FIX INPUT */
 input,
 button,
 select,
