@@ -139,6 +139,9 @@ h2 {
   transition: transform 0.2s ease;
   max-width: 600px;
   margin: 0 auto;
+
+  /* 🔥 IMPORTANTE: impede herança de fonte do título */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .card:hover {
@@ -175,6 +178,9 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+
+  /* 🔥 BLOQUEIA HERANÇA DO BURGER FREE */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* DESCRIÇÃO PADRÃO */
@@ -188,14 +194,14 @@ h2 {
   line-height: 1.4;
 }
 
-/* DESCRIÇÃO DOS BURGERS (SEPARADA E SEGURA) */
+/* 🔥 DESCRIÇÃO DOS BURGERS (FORÇA TOTAL SEM HERANÇA) */
 .desktop-benefits,
 .mobile-benefits {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--muted);
-  line-height: 1.4;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  color: var(--muted) !important;
+  line-height: 1.4 !important;
 }
 
 /* INFO DESCRIÇÃO */
