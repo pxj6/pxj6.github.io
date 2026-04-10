@@ -8,11 +8,11 @@
   }
 
   :root {
-    --bg: #FFFF00;
-    --card: #FFE500;
-    --text: #ffffff;
-    --muted: #b3b3b3;
-    --accent: #1DB954;
+    --bg: #FFE500;
+    --card: #FFFF00;
+    --text: #E82C2C;
+    --muted: #6B3E3E;
+    --accent: #E82C2C;
     --danger: #ff4d4d;
   }
 
