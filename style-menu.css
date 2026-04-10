@@ -45,6 +45,20 @@ header {
   padding: 0.9rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
 }
 
 /* SECTIONS */
