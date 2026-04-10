@@ -178,7 +178,7 @@ footer {
 
   .price {
     margin-top: 0.4rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
     font-size: 1.4rem;
     font-weight: 900 !important;
     color: var(--accent);
@@ -216,4 +216,5 @@ textarea {
 
 h2 {
   color: #FFFFFF!important;
+  margin-bottom: 0.4rem;
 }
